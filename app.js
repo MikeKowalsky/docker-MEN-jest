@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
-  process.env.MONGO_PASSWORD
-}@cluster0-idsge.mongodb.net/docker-MEN-jest?retryWrites=true`;
+// const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
+//   process.env.MONGO_PASSWORD
+// }@cluster0-idsge.mongodb.net/docker-MEN-jest?retryWrites=true`;
+const MONGODB_URI = require("./config/keys").mongoURI;
 
 const app = express();
 
